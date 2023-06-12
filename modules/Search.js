@@ -30,9 +30,9 @@ const Search = ({ ...props }) => {
   // Connection to web crawler
   // Can be found at Enterprise Search/App Search/Credentials
   const client = ElasticAppSearch.createClient({
-    searchKey: "search-6cujcf6k56b9itogx4nuw8pr",
-    endpointBase: "https://my-test-app.ent.us-east4.gcp.elastic-cloud.com",
-    engineName: "oxfordproperties-search-engine",
+    searchKey: process.env.SEARCH_KEY,
+    endpointBase: process.env.ENDPOINT_BASE,
+    engineName: process.env.ENGINE_NAME,
   })
 
   // Set or expected values from search
